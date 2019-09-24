@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Code Editor</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="code-editor.css" rel="stylesheet"/>
+	</head>
+	
+	<body>
+		<div class="menubar">
+			<div class="menus" onclick="showmenu()">Text Tags</div>
+			<div id="headings" class="menu-container">
+				<button type="button" class="buttons" onclick="divTag()">&lt;div&gt;</button>
+				<button type="button" class="buttons" onclick="pTag()">&lt;p&gt;</button>
+				<button type="button" class="buttons" onclick="h1Tag()">&lt;h1&gt;</button>
+				<button type="button" class="buttons" onclick="h2Tag()">&lt;h2&gt;</button>
+				<button type="button" class="buttons" onclick="h3Tag()">&lt;h3&gt;</button>
+				<button type="button" class="buttons" onclick="h4Tag()">&lt;h4&gt;</button>
+				<button type="button" class="buttons" onclick="h5Tag()">&lt;h5&gt;</button>
+				<button type="button" class="buttons" onclick="h6Tag()">&lt;h6&gt;</button>
+			</div>
+			<div class="menus1" onclick="showmenu1()">Styles</div>
+			<div class="menu-container1" id="styles" >
+				<button type="button" class="buttons" onclick="bTag()">&lt;b&gt;</button>
+				<button type="button" class="buttons" onclick="iTag()">&lt;i&gt;</button>
+				<button type="button" class="buttons" onclick="uTag()">&lt;u&gt;</button>
+				<button type="button" class="buttons" onclick="sTag()">&lt;s&gt;</button>
+				<button type="button" class="buttons" onclick="supTag()">&lt;sup&gt;</button>
+				<button type="button" class="buttons" onclick="subTag()">&lt;sub&gt;</button>
+			</div>
+			<div class="menus" id="Brac" onclick="typeBrac()">&lt;&nbsp;&gt;</div>
+			<div class="menus" id="Slash" onclick="typeSlas()">/</div>
+			<div class="menus" id="SlasBrac" onclick="typeSlasBrac()">&lt;/&gt;</div>
+			<div class="menus" id="imgEle" onclick="imgTag()">&lt;img&gt;</div>
+			<div id="imgPopUp">
+			<div class="label">Insert Image Address</div>
+			<input type="text" value="" placeholder="Insert Image Address" id="imageAdd"/><br/>
+			<div class="label">Set the Height of the Image</div>
+			<input type="number" placeholder="Height" value="" id="imgHeight"/><br/>
+			<div class="label">Set the Width of the Image</div>
+			<input type="number" placeholder="Width" value="" id="imgWidth"/><br/>
+			<div class="label">Alternative Text</div>
+			<input type="text" placeholder="Alternative Text" value="" id="imgText"/><br/>
+			<div class="label">Image Title</div>
+			<input type="text" placeholder="Title" value="" id="imgTitle"/><br/>
+			<div><button type="button" id="doneUrl" onclick="imgTagOK()">OK</button><button type="button" id="cancUrl" onclick="cancImg()">Cancel</button></div>
+			</div>
+		</div>
+		<div id="editor-container" onclick="disMenu()">
+			<div id="code-container" >
+				<textarea id="coding" onkeyup="runCode()" onfocus="runCode()" name="inp"></textarea>
+			</div>
+			<div id="preview-container">
+				<div id="coding-preview"></div>
+			</div>
+		</div>
+		<script src="code-editor.js" type="text/javascript"></script>
+	</body>
+</html>
